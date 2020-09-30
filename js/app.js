@@ -54,7 +54,7 @@ if(jobBackground.toLowerCase() === 'no' || jobBackground.toLowerCase() === 'n'){
     alert('ooops wrong!');
         //     console.log('ooops wrong!');
 }
-// fifth question
+// number guessing question
 var correctNumber = 7;
 for (var i = 0; i < 4; i++){
     var userGuess = prompt ('Guess a number between 1 and 10');
@@ -74,7 +74,7 @@ for (var i = 0; i < 4; i++){
         alert('close, but higher!');
     }
 }
-// sixth question
+// question with multiple correct answers
 var tenFavoriteGames = new Array('eso', 'mariokart', 'animal crossing', 'outer worlds', 'pokemon: yellow', 'super mario sunshine', 'pokemon stadium', 'skyrim', 'mario odyssy', 'pokemon snap');
 
 var guesses = 0;

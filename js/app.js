@@ -28,7 +28,7 @@ if(myGradYear.toLowerCase() === 'no' || myGradYear.toLowerCase() === 'n'){
     //     console.log('ooops wrong!');
 }
 
-
+// fourth question
 var myHomeTown = prompt('Did I grow up on Long Island?')
 
 if(myHomeTown.toLowerCase() === 'yes' || myHomeTown.toLowerCase() === 'y'){
@@ -40,7 +40,7 @@ if(myHomeTown.toLowerCase() === 'yes' || myHomeTown.toLowerCase() === 'y'){
     //     console.log('ooops wrong!');
 }
 
-
+// fifth question
 var jobBackground = prompt('Did I used to work in accounting?')
 
 if(jobBackground.toLowerCase() === 'no' || jobBackground.toLowerCase() === 'n'){
@@ -51,7 +51,7 @@ if(jobBackground.toLowerCase() === 'no' || jobBackground.toLowerCase() === 'n'){
     alert('ooops wrong!');
         //     console.log('ooops wrong!');
 }
-
+// sixth question
 var correctNumber = 7;
 for (var i = 0; i < 4; i++){
     var userGuess = prompt ('Guess a number between 1 and 10');
@@ -64,8 +64,11 @@ for (var i = 0; i < 4; i++){
         break;
         correctAnswerCount++;
     }
-    else if (userGuess !== correctNumber) {
-        alert('Nope, try again!')
+    else if (parseInt(userGuess) > correctNumber) {
+        alert('close, but lower!');
+    } 
+    else if (parseInt(userGuess) < correctNumber) {
+        alert('close, but higher!');
     }
 }
 // seventh question

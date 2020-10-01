@@ -10,7 +10,7 @@ startScore();
 
 // greeting using user's name input
 function askForName() {
-    var userName = prompt('Hey! What\'s your name?')
+    var userName = prompt('Hey! What\'s your name?');
     alert('Welcome to my About Me page, ' + userName);
     console.log('This user\'s name is: ' + userName); 
 }
@@ -18,12 +18,12 @@ function askForName() {
 askForName();
 
 // first question
-var myPets = prompt('Do I have pets?')
+var myPets = prompt('Do I have pets?');
 
 function guessMyPets(){
     if(myPets.toLowerCase() === 'yes' || myPets.toLowerCase() === 'y'){
         alert('you are correct!');
-        correctAnswerCount++;
+        //correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -33,11 +33,11 @@ function guessMyPets(){
 guessMyPets();
 
 // second question
-var myGradYear = prompt('Was my highschool graduation year 2016?')
+var myGradYear = prompt('Was my highschool graduation year 2016?');
 function guessMyGradYear(){
     if(myGradYear.toLowerCase() === 'no' || myGradYear.toLowerCase() === 'n'){
         alert('you are correct!');
-        correctAnswerCount++;
+        //correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -46,11 +46,11 @@ function guessMyGradYear(){
 }
 guessMyGradYear();
 // third question
-var myHomeTown = prompt('Did I grow up on Long Island?')
+var myHomeTown = prompt('Did I grow up on Long Island?');
 function guessMyHomeTown(){
     if(myHomeTown.toLowerCase() === 'yes' || myHomeTown.toLowerCase() === 'y'){
         alert('you are correct!');
-        correctAnswerCount++;
+        //correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -59,16 +59,18 @@ function guessMyHomeTown(){
 }
 guessMyHomeTown();
 // fourth question
-var jobBackground = prompt('Did I used to work in accounting?')
-
-if(jobBackground.toLowerCase() === 'no' || jobBackground.toLowerCase() === 'n'){
-    alert('you are correct!');
-    correctAnswerCount++;
-    //     console.log('you are correct!');
-} else {
-    alert('ooops wrong!');
-        //     console.log('ooops wrong!');
+var jobBackground = prompt('Did I used to work in accounting?');
+function guessJobBackground(){
+    if(jobBackground.toLowerCase() === 'no' || jobBackground.toLowerCase() === 'n'){
+        alert('you are correct!');
+        //correctAnswerCount++;
+        //     console.log('you are correct!');
+    } else {
+        alert('ooops wrong!');
+            //     console.log('ooops wrong!');
+    } 
 }
+guessJobBackground();
 // number guessing question
 var correctNumber = 7;
 for (var i = 0; i < 4; i++){
@@ -104,7 +106,7 @@ while (!isAnswerCorrect && guesses < maxGuesses){
         if (userAnswer.toLowerCase() === tenFavoriteGames[i]){
             alert('You got one!');
             isAnswerCorrect = true;
-            correctAnswerCount++;
+            //correctAnswerCount++;
             break;
         } else if (i === tenFavoriteGames.length - 1) {
             alert('That one is cool too, just not in the top 10!');

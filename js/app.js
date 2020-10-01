@@ -1,12 +1,6 @@
 'use strict';
 // universal variable for making a count of correct answers.
-
-function startScore(){
-    var correctAnswerCount = 0; 
-    // console.log('This is the score ' + correctAnswerCount );
-}
-
-startScore();
+var correctAnswerCount = 0;
 
 // greeting using user's name input
 function askForName() {
@@ -23,7 +17,7 @@ var myPets = prompt('Do I have pets?');
 function guessMyPets(){
     if(myPets.toLowerCase() === 'yes' || myPets.toLowerCase() === 'y'){
         alert('you are correct!');
-        //correctAnswerCount++;
+        correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -37,7 +31,7 @@ var myGradYear = prompt('Was my highschool graduation year 2016?');
 function guessMyGradYear(){
     if(myGradYear.toLowerCase() === 'no' || myGradYear.toLowerCase() === 'n'){
         alert('you are correct!');
-        //correctAnswerCount++;
+        correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -50,7 +44,7 @@ var myHomeTown = prompt('Did I grow up on Long Island?');
 function guessMyHomeTown(){
     if(myHomeTown.toLowerCase() === 'yes' || myHomeTown.toLowerCase() === 'y'){
         alert('you are correct!');
-        //correctAnswerCount++;
+        correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -63,7 +57,7 @@ var jobBackground = prompt('Did I used to work in accounting?');
 function guessJobBackground(){
     if(jobBackground.toLowerCase() === 'no' || jobBackground.toLowerCase() === 'n'){
         alert('you are correct!');
-        //correctAnswerCount++;
+        correctAnswerCount++;
         //     console.log('you are correct!');
     } else {
         alert('ooops wrong!');
@@ -88,7 +82,7 @@ while (i < 4){
    if (parseInt(userGuess) === correctNumber) {
             alert('Ay! You got it!');
             break;
-            //correctAnswerCount++;
+            correctAnswerCount++;
             }
             else if (parseInt(userGuess) > correctNumber) {
                 alert('close, but lower!');
@@ -106,44 +100,33 @@ while (i < 4){
 }
 checkUsersGuess();
 
-//     else if (parseInt(userGuess) === correctNumber) {
-//         alert('Ay! You got it!');
-//         break;
-//         correctAnswerCount++;
-//     }
-//     else if (parseInt(userGuess) > correctNumber) {
-//         alert('close, but lower!');
-//     } 
-//     else if (parseInt(userGuess) < correctNumber) {
-//         alert('close, but higher!');
-//     }
-// }
-// // question with multiple correct answers
-// var tenFavoriteGames = new Array('eso', 'mariokart', 'animal crossing', 'outer worlds', 'pokemon: yellow', 'super mario sunshine', 'pokemon stadium', 'skyrim', 'mario odyssy', 'pokemon snap');
+// question with multiple correct answers
+var tenFavoriteGames = new Array('eso', 'mariokart', 'animal crossing', 'outer worlds', 'pokemon: yellow', 'super mario sunshine', 'pokemon stadium', 'skyrim', 'mario odyssy', 'pokemon snap');
 
-// var guesses = 0;
-// var maxGuesses = 6;
-// var isAnswerCorrect = false;
-
-// while (!isAnswerCorrect && guesses < maxGuesses){
+var guesses = 0;
+var maxGuesses = 6;
+var isAnswerCorrect = false;
+function guessFavoriteGame(){
+while (!isAnswerCorrect && guesses < maxGuesses){
    
-//     var userAnswer = prompt('Name one of my favorite video games!');
+    var userAnswer = prompt('Name one of my favorite video games!');
 
-//     for (var i = 0; i < tenFavoriteGames.length; i++) {
-//         if (userAnswer.toLowerCase() === tenFavoriteGames[i]){
-//             alert('You got one!');
-//             isAnswerCorrect = true;
-//             //correctAnswerCount++;
-//             break;
-//         } else if (i === tenFavoriteGames.length - 1) {
-//             alert('That one is cool too, just not in the top 10!');
-//         }
-//     } 
-//     guesses++;
-// }
+    for (var i = 0; i < tenFavoriteGames.length; i++) {
+        if (userAnswer.toLowerCase() === tenFavoriteGames[i]){
+            alert('You got one!');
+            isAnswerCorrect = true;
+            correctAnswerCount++;
+            break;
+        } else if (i === tenFavoriteGames.length - 1) {
+            alert('That one is cool too, just not in the top 10!');
+        }
+    } 
+    guesses++;
+}
 
-// if (!isAnswerCorrect) {
-//     alert('You\'re out of guesses, sorry!');
-// }
-
-// alert('You have gotten ' + correctAnswerCount + ' answer(s) correct out of 7!');
+if (!isAnswerCorrect) {
+    alert('You\'re out of guesses, sorry!');
+}
+}
+guessFavoriteGame();
+alert('You have gotten ' + correctAnswerCount + ' answer(s) correct out of 7!');

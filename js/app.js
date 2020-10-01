@@ -1,6 +1,13 @@
 'use strict';
 // universal variable for making a count of correct answers.
-var correctAnswerCount = 0;
+
+function keepScore(){
+    var correctAnswerCount = 0; 
+    console.log('This is the score ' + correctAnswerCount );
+}
+
+keepScore();
+
 
 // greeting using user's name input
 var userName = prompt('Hey! What\'s your name?')

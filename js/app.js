@@ -72,51 +72,78 @@ function guessJobBackground(){
 }
 guessJobBackground();
 // number guessing question
+
 var correctNumber = 7;
-for (var i = 0; i < 4; i++){
-    var userGuess = prompt ('Guess a number between 1 and 10');
-    if((i === 3) && (correctNumber !== parseInt(userGuess))) {
-        alert('sorry! you are out of chances');
-        break;
-    }
-    else if (parseInt(userGuess) === correctNumber) {
-        alert('Ay! You got it!');
-        break;
-        correctAnswerCount++;
-    }
-    else if (parseInt(userGuess) > correctNumber) {
-        alert('close, but lower!');
-    } 
-    else if (parseInt(userGuess) < correctNumber) {
-        alert('close, but higher!');
-    }
+function tellUserLastChanceGuess(){
+    alert('sorry! you are out of chances');
 }
-// question with multiple correct answers
-var tenFavoriteGames = new Array('eso', 'mariokart', 'animal crossing', 'outer worlds', 'pokemon: yellow', 'super mario sunshine', 'pokemon stadium', 'skyrim', 'mario odyssy', 'pokemon snap');
-
-var guesses = 0;
-var maxGuesses = 6;
-var isAnswerCorrect = false;
-
-while (!isAnswerCorrect && guesses < maxGuesses){
+function correctUserGuess(){
    
-    var userAnswer = prompt('Name one of my favorite video games!');
-
-    for (var i = 0; i < tenFavoriteGames.length; i++) {
-        if (userAnswer.toLowerCase() === tenFavoriteGames[i]){
-            alert('You got one!');
-            isAnswerCorrect = true;
-            //correctAnswerCount++;
+        alert('Ay! You got it!');
+}
+function checkUsersGuess(){
+    var i = 0;
+while (i < 4){ 
+    var userGuess = prompt ('Guess a number between 1 and 10');
+   if (parseInt(userGuess) === correctNumber) {
+            alert('Ay! You got it!');
             break;
-        } else if (i === tenFavoriteGames.length - 1) {
-            alert('That one is cool too, just not in the top 10!');
+            //correctAnswerCount++;
+            }
+            else if (parseInt(userGuess) > correctNumber) {
+                alert('close, but lower!');
+                i++;
+            } 
+            else if (parseInt(userGuess) < correctNumber) {
+                alert('close, but higher!');
+                i++;
+            }
+            else if (parseInt(userGuess) !== correctNumber && (i === 3)) { 
+                tellUserLastChanceGuess();
+            }
         }
-    } 
-    guesses++;
+    
 }
+checkUsersGuess();
 
-if (!isAnswerCorrect) {
-    alert('You\'re out of guesses, sorry!');
-}
+//     else if (parseInt(userGuess) === correctNumber) {
+//         alert('Ay! You got it!');
+//         break;
+//         correctAnswerCount++;
+//     }
+//     else if (parseInt(userGuess) > correctNumber) {
+//         alert('close, but lower!');
+//     } 
+//     else if (parseInt(userGuess) < correctNumber) {
+//         alert('close, but higher!');
+//     }
+// }
+// // question with multiple correct answers
+// var tenFavoriteGames = new Array('eso', 'mariokart', 'animal crossing', 'outer worlds', 'pokemon: yellow', 'super mario sunshine', 'pokemon stadium', 'skyrim', 'mario odyssy', 'pokemon snap');
 
-alert('You have gotten ' + correctAnswerCount + ' answer(s) correct out of 7!');
+// var guesses = 0;
+// var maxGuesses = 6;
+// var isAnswerCorrect = false;
+
+// while (!isAnswerCorrect && guesses < maxGuesses){
+   
+//     var userAnswer = prompt('Name one of my favorite video games!');
+
+//     for (var i = 0; i < tenFavoriteGames.length; i++) {
+//         if (userAnswer.toLowerCase() === tenFavoriteGames[i]){
+//             alert('You got one!');
+//             isAnswerCorrect = true;
+//             //correctAnswerCount++;
+//             break;
+//         } else if (i === tenFavoriteGames.length - 1) {
+//             alert('That one is cool too, just not in the top 10!');
+//         }
+//     } 
+//     guesses++;
+// }
+
+// if (!isAnswerCorrect) {
+//     alert('You\'re out of guesses, sorry!');
+// }
+
+// alert('You have gotten ' + correctAnswerCount + ' answer(s) correct out of 7!');

@@ -1,13 +1,12 @@
 'use strict';
 // universal variable for making a count of correct answers.
 
-function keepScore(){
+function startScore(){
     var correctAnswerCount = 0; 
     // console.log('This is the score ' + correctAnswerCount );
 }
 
-keepScore();
-
+startScore();
 
 // greeting using user's name input
 function askForName() {
@@ -21,28 +20,31 @@ askForName();
 // first question
 var myPets = prompt('Do I have pets?')
 
-
-if(myPets.toLowerCase() === 'yes' || myPets.toLowerCase() === 'y'){
-    alert('you are correct!');
-    correctAnswerCount++;
-    //     console.log('you are correct!');
-} else {
-    alert('ooops wrong!');
-    //     console.log('ooops wrong!');
+function guessMyPets(){
+    if(myPets.toLowerCase() === 'yes' || myPets.toLowerCase() === 'y'){
+        alert('you are correct!');
+        correctAnswerCount++;
+        //     console.log('you are correct!');
+    } else {
+        alert('ooops wrong!');
+        //      console.log('ooops wrong!');
+    } 
 }
+guessMyPets();
 
 // second question
 var myGradYear = prompt('Was my highschool graduation year 2016?')
-
-if(myGradYear.toLowerCase() === 'no' || myGradYear.toLowerCase() === 'n'){
-    alert('you are correct!');
-    correctAnswerCount++;
-    //     console.log('you are correct!');
-} else {
-    alert('ooops wrong!');
-    //     console.log('ooops wrong!');
+function guessMyGradYear(){
+    if(myGradYear.toLowerCase() === 'no' || myGradYear.toLowerCase() === 'n'){
+        alert('you are correct!');
+        correctAnswerCount++;
+        //     console.log('you are correct!');
+    } else {
+        alert('ooops wrong!');
+        //     console.log('ooops wrong!');
+    } 
 }
-
+guessMyGradYear();
 // third question
 var myHomeTown = prompt('Did I grow up on Long Island?')
 

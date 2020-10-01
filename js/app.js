@@ -47,16 +47,17 @@ function guessMyGradYear(){
 guessMyGradYear();
 // third question
 var myHomeTown = prompt('Did I grow up on Long Island?')
-
-if(myHomeTown.toLowerCase() === 'yes' || myHomeTown.toLowerCase() === 'y'){
-    alert('you are correct!');
-    correctAnswerCount++;
-    //     console.log('you are correct!');
-} else {
-    alert('ooops wrong!');
-    //     console.log('ooops wrong!');
+function guessMyHomeTown(){
+    if(myHomeTown.toLowerCase() === 'yes' || myHomeTown.toLowerCase() === 'y'){
+        alert('you are correct!');
+        correctAnswerCount++;
+        //     console.log('you are correct!');
+    } else {
+        alert('ooops wrong!');
+        //     console.log('ooops wrong!');
+    }  
 }
-
+guessMyHomeTown();
 // fourth question
 var jobBackground = prompt('Did I used to work in accounting?')
 

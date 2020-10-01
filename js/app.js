@@ -3,16 +3,21 @@
 
 function keepScore(){
     var correctAnswerCount = 0; 
-    console.log('This is the score ' + correctAnswerCount );
+    // console.log('This is the score ' + correctAnswerCount );
 }
 
 keepScore();
 
 
 // greeting using user's name input
-var userName = prompt('Hey! What\'s your name?')
+function askForName() {
+    var userName = prompt('Hey! What\'s your name?')
     alert('Welcome to my About Me page, ' + userName);
-    console.log('This user\'s name is: ' + userName);
+    console.log('This user\'s name is: ' + userName); 
+}
+
+askForName();
+
 // first question
 var myPets = prompt('Do I have pets?')
 

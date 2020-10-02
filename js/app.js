@@ -125,7 +125,7 @@ while (!isAnswerCorrect && guesses < maxGuesses){
 }
 
 if (!isAnswerCorrect) {
-    alert('You\'re out of guesses, sorry!');
+    alert('You\'re out of guesses, sorry! The correct answers were: ' + tenFavoriteGames[0] + ', ' + tenFavoriteGames[1] + ', ' + tenFavoriteGames[2] + ', ' + tenFavoriteGames[3] + ', ' + tenFavoriteGames[4] + ', ' + tenFavoriteGames[5] + ', ' + tenFavoriteGames[6] + ', ' + tenFavoriteGames[7] + ', ' + tenFavoriteGames[8] + ', ' + tenFavoriteGames[9] + '!');
 }
 }
 guessFavoriteGame();
